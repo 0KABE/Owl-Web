@@ -16,6 +16,9 @@ class TrafficChart extends React.Component<Props> {
     legend: {
       data: ['Download', 'Upload'],
     },
+    tooltip: {
+      trigger: 'axis',
+    },
     xAxis: {
       type: 'category',
       data: this.props.speeds.time.map((value) => value.toLocaleTimeString()),
