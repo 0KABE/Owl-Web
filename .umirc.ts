@@ -4,6 +4,7 @@ export default defineConfig({
   layout: {
     name: 'Owl',
     layout: 'side',
+    headerRender: false,
   },
   locale: {
     default: 'zh-CN',
