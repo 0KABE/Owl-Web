@@ -16,7 +16,8 @@ export default defineConfig({
     type: 'none',
   },
   routes: [
-    { path: '/', component: '@/pages/index' },
+    { path: '/', name: 'Overview', icon: 'user', component: './overview' },
+    { path: '/index', name: 'Index', icon: 'user', component: './index' },
   ],
   fastRefresh: {},
 });
