@@ -8,7 +8,8 @@ type State = {
 };
 
 type Props = {
-  url: URL;
+  url: URL; //websocket url
+  duration: number; //seconds
 };
 
 class Traffic extends React.Component<Props> {
@@ -38,6 +39,15 @@ class Traffic extends React.Component<Props> {
   }
 
   updateSpeeds(download: number, upload: number, time: Date) {
+    while (
+      this.speeds.time.length > 0 &&
+      time.getTime() - this.speeds.time[0].getTime() >=
+        this.props.duration * 1000
+    ) {
+      this.speeds.time.shift();
+      this.speeds.download.shift();
+      this.speeds.upload.shift();
+    }
     this.speeds.download.push(download);
     this.speeds.upload.push(upload);
     this.speeds.time.push(time);
