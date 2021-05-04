@@ -3,7 +3,7 @@ import Traffic from '@/components/Traffic';
 
 class Overview extends React.Component {
   render() {
-    return <Traffic url={new URL('http://www.placeholder.com')} />;
+    return <Traffic url={new URL('ws://localhost:8080/traffic')} />;
   }
 }
 
