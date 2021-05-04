@@ -60,40 +60,6 @@ class Traffic extends React.Component<Props> {
     this.statistic.upload = upload;
   }
 
-  // randomIntFromInterval(min: number, max: number) {
-  //   // min and max included
-  //   return Math.floor(Math.random() * (max - min + 1) + min);
-  // }
-
-  // time: Date = new Date();
-  // randomData(): [Number, Number, Date] {
-  //   this.time = new Date(this.time.getTime() + 1000);
-  //   return [
-  //     this.randomIntFromInterval(5000, 10000),
-  //     this.randomIntFromInterval(5000, 1000),
-  //     this.time,
-  //   ];
-  // }
-
-  // updateData() {
-  //   if (this.speeds.time.length >= 10) {
-  //     this.speeds.download.shift();
-  //     this.speeds.upload.shift();
-  //     this.speeds.time.shift();
-  //   }
-  //   const [download, upload, time] = this.randomData();
-  //   this.speeds.download.push(download);
-  //   this.speeds.upload.push(upload);
-  //   this.speeds.time.push(time);
-  //   this.statistic.download = download;
-  //   this.statistic.upload = upload;
-  //   this.statistic.downloadTotal =
-  //     this.statistic.downloadTotal.valueOf() + download.valueOf();
-  //   this.statistic.uploadTotal =
-  //     this.statistic.uploadTotal.valueOf() + upload.valueOf();
-  //   this.setState({ statistic: this.statistic, speeds: this.speeds });
-  // }
-
   componentDidMount() {
     this.webSocket.addEventListener('message', this.webSocketEventListener);
   }
