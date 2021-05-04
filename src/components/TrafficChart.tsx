@@ -2,8 +2,8 @@ import React from 'react';
 import ReactECharts from 'echarts-for-react';
 
 export type Speeds = {
-  download: Number[];
-  upload: Number[];
+  download: number[];
+  upload: number[];
   time: Date[];
 };
 
@@ -28,11 +28,13 @@ class TrafficChart extends React.Component<Props> {
       {
         type: 'line',
         name: 'Download',
+        areaStyle: { normal: {} },
         data: this.props.speeds.download,
       },
       {
         type: 'line',
         name: 'Upload',
+        areaStyle: { normal: {} },
         data: this.props.speeds.upload,
       },
     ],
