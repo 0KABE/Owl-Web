@@ -18,7 +18,12 @@ export default defineConfig({
   },
   routes: [
     { path: '/', name: 'Overview', icon: 'areaChart', component: './overview' },
-    { path: '/index', name: 'Index', icon: 'user', component: './index' },
+    {
+      path: '/policies',
+      name: 'Policies',
+      icon: 'user',
+      component: './policies',
+    },
   ],
   fastRefresh: {},
 });
