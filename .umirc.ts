@@ -24,6 +24,12 @@ export default defineConfig({
       icon: 'user',
       component: './policies',
     },
+    {
+      path: '/config',
+      name: 'Configuration',
+      icon: 'user',
+      component: './config',
+    },
   ],
   fastRefresh: {},
 });
