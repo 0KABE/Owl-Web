@@ -25,6 +25,12 @@ export default defineConfig({
       component: './policies',
     },
     {
+      path: '/rules',
+      name: 'Rules',
+      icon: 'user',
+      component: './rules',
+    },
+    {
       path: '/config',
       name: 'Configuration',
       icon: 'user',
