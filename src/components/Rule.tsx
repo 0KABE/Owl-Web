@@ -17,7 +17,7 @@ class Rule extends React.Component<Props, State> {
   render() {
     return (
       <Card style={{ minWidth: '100%' }}>
-        {this.props.rule.Type == 'FINAL'
+        {this.props.rule.Type != 'Final'
           ? `${this.props.rule.Type}, ${this.props.rule.Condition}, ${this.props.rule.Proxy}`
           : `${this.props.rule.Type}, ${this.props.rule.Proxy}`}
       </Card>
